@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  oportunia.api:
+     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password123
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+     ports:
+        - "5001:80"
+        - "5443:443" 
+     volumes:
+        - ~/.aspnet/https:/https:ro
+  oportunia.authentication:
+     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password123
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+     ports:
+      - "5101:80"
+      - "5444:443"
+     volumes:
+        - ~/.aspnet/https:/https:ro

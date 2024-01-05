@@ -1,0 +1,52 @@
+version: '3.4'
+
+services:
+  sql-server:
+    container_name: oportuniaDB
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@2023
+      - TZ=America/Sao_Paulo
+
+  oportunia.authentication:
+    container_name: oportuniaAuthentication
+    image: ${DOCKER_REGISTRY-}oportuniaauthentication
+    build:
+      context: ./api
+      dockerfile: Oportunia.Authentication/Dockerfile
+    depends_on:
+      - sql-server
+    environment:
+      - DB_HOST=sql-server
+      - DB_NAME=OportuniaDB
+      - DB_SA_PASSWORD=password@2023
+
+  oportunia.api:
+    container_name: oportuniaApi
+    image: ${DOCKER_REGISTRY-}oportuniaapi
+    build:
+      context: ./api
+      dockerfile: Oportunia/Dockerfile
+    depends_on:
+      - sql-server
+    environment:
+      - DB_HOST=sql-server
+      - DB_NAME=OportuniaDB
+      - DB_SA_PASSWORD=password@2023
+
+  app:
+    container_name: oportuniaClient
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=production
+    command: ["yarn", "start"]
