@@ -55,7 +55,7 @@ Projeto desenvolvido utilizando Next.js e .NET 7. Neste projeto, empresas podem 
 # Clone este repositório
 $ git clone https://github.com/ArlissonC/oportunia.git
 
-# Abra o terminal na pasta do projeto
+# Abra o terminal na pasta do projeto e execute o comando
 $ docker-compose up
 
 # Ainda na pasta do projeto, você precisará subir o banco de dados para o container SQL Server.
