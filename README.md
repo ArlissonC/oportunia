@@ -12,29 +12,38 @@ Plataforma que conecta empresa e candidatos
 Projeto desenvolvido utilizando Next.js e .NET 7. Neste projeto, empresas podem aproveitar a plataforma para efetuar o cadastro de informações cruciais, bem como anunciar suas vagas de maneira clara e acessível. Por sua vez, os candidatos desfrutam de um processo simplificado de registro e candidatura, proporcionando uma interação intuitiva e eficaz com as oportunidades disponíveis.
 ## ✅ Principais Features
 
-### Empresa
-- [x] Gestão de vagas 
-- [x] Gestão de candidatos
-- [x] Visualização de perfil do candidato, junto a currículo e experiências
-- [x] Gestão de perfil 
-- [x] Gestão de endereço
-- [x] Adicionar / Editar logo da empresa
-- [x] Gestão de dados de login
-
-### Candidato
-- [x] Candidatura simplificada
-- [x] Gestão de candidaturas
-- [x] Adicionar / Editar foto de perfil
-- [x] Adicionar / Editar currículo PDF
-- [x] Visualização de perfil da empresa
+### 🏬 Empresa 
+- [x] Gestão de vagas
+<img src="https://i.imgur.com/hltQVtY.png">
+     
+- [x] Edição e visualização de candidatos da vaga
+<img src="https://i.imgur.com/SmVbPZW.png">
+     
 - [x] Gestão de perfil
-- [x] Gestão de dados de login
+<img src="https://i.imgur.com/de4FNNn.png">
+     
+- [x] Perfil público com informações da empresa
+<img src="https://i.imgur.com/MPQZmRo.png">
+
+### 👨‍💼 Candidato 
+- [x] Gestão de perfil
+<img src="https://i.imgur.com/397hwSA.png">
+
+- [x] Perfil público com informações do candidato
+<img src="https://i.imgur.com/sWZuvgP.png">
+
+- [x] Candidatura simplificada
+<img src="https://i.imgur.com/4rzk5Hp.png">
+     
+- [x] Gestão de candidaturas
+<img src="https://i.imgur.com/0xKsZA8.png">
 
 ### Autenticação
 - [x] Login
+<img src="https://i.imgur.com/K2fpGqE.png">
+     
 - [x] Registro de Empresa / Candidato
-- [x] Recuperar senha
-- [x] Resetar senha
+<img src="https://i.imgur.com/ybwdnwY.png">
 
 ## 💻 Tecnologias
 
